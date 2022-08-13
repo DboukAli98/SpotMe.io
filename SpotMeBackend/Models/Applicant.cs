@@ -17,5 +17,7 @@ public class Applicant
     public string skills { get; set; }
     public DateTime CreatedAt { get; set; }
     
-  
+    public ICollection<Education> Educations { get; set; }
+
+
 }

@@ -237,6 +237,7 @@ public class AuthenticationController : ControllerBase
         var user = await _userManager.FindByIdAsync(userId);
         var applicant = await _context.Applicants.Where(a => a.User == user)
             .Include(a => a.Jobs)
+            .Include(a =>a .Educations)
             .FirstOrDefaultAsync();
 
 
